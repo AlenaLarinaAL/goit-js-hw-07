@@ -53,7 +53,7 @@ function closeInstanceByKey(instance, key) {
         window.addEventListener('keydown', event => {
             if (event.code === key) {
                 instance.close();
-                window.removeEventListener('keydown', event);
+                window.removeEventListener('keydown', closeInstanceByKey);
             };
         });
     };
